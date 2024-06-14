@@ -62,7 +62,7 @@
         "SourceCode": {
             "General": {
                 "S3Bucket": "solutions",
-                "KeyPrefix": "serverless-image-handler/v4.2"
+                "KeyPrefix": "serverless-image-handler/v6.2.5"
             }
         }
     },
@@ -176,7 +176,7 @@
                                         "KeyPrefix"
                                     ]
                                 },
-                                "image-handler.zip"
+                                "8c050ceb94125d3a6bb91cf9c6fc6604a16e214b9bb1aa8310d2345d86a3f0c1.zip"
                             ]
                         ]
                     }
@@ -356,7 +356,7 @@
                                         "KeyPrefix"
                                     ]
                                 },
-                                "custom-resource.zip"
+                                "8614b6686589285c7132e6bd0eb09c28e4d0fbb79f95cba6055240e778adf9c9.zip"
                             ]
                         ]
                     }
