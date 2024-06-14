@@ -181,7 +181,7 @@
                         ]
                     }
                 },
-                "Runtime": "nodejs18.x",
+                "Runtime": "nodejs16.x",
                 "MemorySize": 1024,
                 "Timeout": 30,
                 "Environment" : {
@@ -362,7 +362,7 @@
                     }
                 },
                 "Timeout": 30,
-                "Runtime": "nodejs18.x",
+                "Runtime": "nodejs16.x",
                 "Role": { "Fn::GetAtt": [ "CustomResourceRole", "Arn" ] },
                 "Handler": "index.handler"
             }
