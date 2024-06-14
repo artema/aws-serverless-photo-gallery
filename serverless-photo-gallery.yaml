@@ -294,7 +294,7 @@ Resources:
   ListImages:
     Type: AWS::Lambda::Function
     Properties:
-      Runtime: nodejs12.x
+      Runtime: nodejs18.x
       Handler: index.handler
       Role: !GetAtt ListImagesLambdaRole.Arn
       Environment:
@@ -335,7 +335,7 @@ Resources:
   ListSubfolders:
     Type: AWS::Lambda::Function
     Properties:
-      Runtime: nodejs12.x
+      Runtime: nodejs18.x
       Handler: index.handler
       Role: !GetAtt ListImagesLambdaRole.Arn
       Environment:
@@ -378,7 +378,7 @@ Resources:
   GetSignedCookies:
     Type: AWS::Lambda::Function
     Properties:
-      Runtime: nodejs12.x
+      Runtime: nodejs18.x
       Handler: index.handler
       Role: !GetAtt GetSignedCookiesLambdaRole.Arn
       Environment:
@@ -632,7 +632,7 @@ Resources:
   WebUiCustomResource:
     Type: AWS::Serverless::Function
     Properties:
-      Runtime: nodejs12.x
+      Runtime: nodejs18.x
       Handler: index.handler
       ReservedConcurrentExecutions: 1
       MemorySize: 256
