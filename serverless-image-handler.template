@@ -453,19 +453,6 @@
             },
             "DependsOn": [ "CustomResourcePolicy", "CustomResourceRole" ]
         },
-        "CustomResourceAnonymousMetric": {
-            "Type": "Custom::CustomResource",
-            "Properties": {
-                "ServiceToken": {"Fn::GetAtt": ["CustomResourceFunction", "Arn"]},
-                "Region": [{ "Ref": "AWS::Region" }],
-                "solutionId": "SO0023",
-                "UUID": {"Fn::GetAtt": ["CustomResourceUuid", "UUID"]},
-                "version": "v4.2",
-                "anonymousData": {"Fn::FindInMap": ["Send", "AnonymousUsage", "Data"]},
-                "customAction": "sendMetric"
-            },
-            "DependsOn": [ "CustomResourcePolicy", "CustomResourceRole" ]
-        },
         "CustomResourceCheckSourceBuckets": {
             "Type": "Custom::CustomResource",
             "Properties": {
