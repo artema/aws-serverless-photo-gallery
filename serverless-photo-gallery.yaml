@@ -301,7 +301,7 @@ Resources:
         Variables:
           BUCKET: !Ref ImagesS3Bucket
           PREFIX: !Ref ImagesS3Prefix
-          LIMIT: "20"
+          LIMIT: "100"
       Code:
         ZipFile: |
           const AWS = require('aws-sdk');
