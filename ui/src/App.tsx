@@ -66,7 +66,6 @@ const App: React.FunctionComponent<Props> = (props) => {
       }}
     >
       {isSignedIn &&
-        <MenuProvider id="menu">
           <Router>
             <Route render={({ history }) => {
               const path: string = history.location.pathname;
@@ -106,7 +105,7 @@ const App: React.FunctionComponent<Props> = (props) => {
               }
             }} />
 
-            <Route render={({ history }) => (
+            {/* <Route render={({ history }) => (
               <Menu id="menu">
                 {history.location.search !== '?browse' &&
                   <Item onClick={() => history.push(history.location.pathname + '?browse')}>
@@ -120,9 +119,8 @@ const App: React.FunctionComponent<Props> = (props) => {
                   Sign out
                   </Item>
               </Menu>
-            )} />
+            )} /> */}
           </Router>
-        </MenuProvider>
       }
     </Authenticator>
   );
