@@ -132,19 +132,21 @@ const App: React.FunctionComponent<Props> = (props) => {
     const data: GetSignedCookiesQuery = result.data as GetSignedCookiesQuery;
 
     if(data.getSignedCookies) {
-      data.getSignedCookies.forEach((nameValuePair) => {
-        if (!nameValuePair) {
-          return;
-        }
-        props.cookies.set(
-          nameValuePair.name,
-          nameValuePair.value,
-          {
-            path: '/image',
-            secure: true
-          }
-        );
-      });
+      localStorage.setItem("cookies", JSON.stringify(data.getSignedCookies));
+
+      // data.getSignedCookies.forEach((nameValuePair) => {
+      //   if (!nameValuePair) {
+      //     return;
+      //   }
+      //   props.cookies.set(
+      //     nameValuePair.name,
+      //     nameValuePair.value,
+      //     {
+      //       path: '/image',
+      //       secure: true
+      //     }
+      //   );
+      // });
     }
   }
 

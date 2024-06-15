@@ -88,12 +88,14 @@ const Gallery: React.FunctionComponent<Props> = (props) => {
     );
 
     function generateImageUrl(image: string) {
-        const imgDimensions = approximateWindowsDimensions();
+        const cookies = JSON.parse(localStorage.getItem('cookies') || 'null') || [];
+
+        // const imgDimensions = approximateWindowsDimensions();
         return '/image/' +
             utils.base64encode(JSON.stringify({
                 key: image,
-                edits: { resize: { width: imgDimensions.width, height: imgDimensions.height, fit: 'contain' } }
-            }));
+                // edits: { resize: { width: imgDimensions.width, height: imgDimensions.height, fit: 'contain' } }
+            })) + '?' + cookies.map((cookie:any) => cookie.name.split('CloudFront-')[1] + '=' + cookie.value).join('&');
     }
 
     function prev(e?: React.SyntheticEvent) {

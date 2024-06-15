@@ -8,6 +8,8 @@ interface Props {
 }
 
 const ImageCard: React.FunctionComponent<Props> = (props) => {
+    const cookies = JSON.parse(localStorage.getItem('cookies') || 'null') || [];
+    
     return (
         <Card
             bg="secondary"
@@ -17,7 +19,7 @@ const ImageCard: React.FunctionComponent<Props> = (props) => {
                 src={'/image/' + utils.base64encode(JSON.stringify({
                     key: props.url,
                     edits: { resize: { width: 240, height: 240 } }
-                }))}
+                })) + '?' + cookies.map((cookie:any) => cookie.name.split('CloudFront-')[1] + '=' + cookie.value).join('&')}
                 variant="top"
             />
         </Card>
