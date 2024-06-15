@@ -404,7 +404,7 @@ Resources:
                           Resource: process.env.WILDCARD,
                           Condition: {
                               DateLessThan: {
-                                  "AWS:EpochTime": new Date().getTime() + 8 * 3600 * 1000
+                                  "AWS:EpochTime": new Date().getTime() + 1 * 3600 * 1000
                               }
                           }
 
