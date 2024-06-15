@@ -326,7 +326,7 @@ Resources:
               items: response
                 .Contents
                 .filter(({Size}) => Size > 0)
-                .filter(({Key}) => Key.match(/\.(jpeg|jpg)$/i))
+                .filter(({Key}) => Key.match(/\.(jpeg|jpg|png)$/i))
                 .map(({Key: url}) => ({ url })),
               nextToken: response.NextContinuationToken
             };
